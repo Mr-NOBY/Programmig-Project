@@ -9,11 +9,11 @@ protected:
     string role;
     string email;
     string password;
-    bool loggedIn;
+
 public:
     User();
-    User(const string& uname, const string& urole, const string& uemail, const string& upass);
-    bool login(const string& uname, const string& upass);
+    User(const string& username, const string& role, const string& email, const string& password);
+    void login();
     void logout();
     void changePassword(const string& new_password);
     string getUserRole();

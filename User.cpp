@@ -3,29 +3,32 @@
 #include <string>
 using namespace std;
 
-User::User(const std::string& uname, const std::string& urole, const std::string& uemail, const std::string& upass)
-        : username(uname), role(urole), email(uemail), password(upass), loggedIn(false) {}
+User::User(const string& username, const string& role,
+           const string& email, const string& password)
+        : username(username), role(role), email(email), password(password) {}
 
-bool User::login(const string& uname, const string& upass) {
-    if (username == uname && password == upass) {
-        loggedIn = true;
-        return true;
-    } else {
-        return false;
+void User::login() {
+    string input_username, input_password;
+    cout << "Enter username: ";
+    cin >> input_username;
+    cout << "Enter password: ";
+    cin >> input_password;
+
+    if (input_username == username && input_password == password) {
+        cout << "User " << username << " logged in successfully." << endl;
+    }
+    else {
+        cout << "Login failed. Incorrect username or password." << endl;
     }
 }
 
 void User::logout() {
-    if (loggedIn) {
-        loggedIn = false;
-        cout << "User " << username << " logged out." << endl;
-    } else {
-       cout << "You are not currently logged in." << std::endl;
-    }
+    cout << "User " << username << " logged out." << std::endl;
 }
 
-void User::changePassword(const string& newPass) {
-    password = newPass;
+void User::changePassword(const string& new_password) {
+    password = new_password;
+    cout << "Password changed successfully for user " << username << "." << endl;
 }
 
 string User::getUserRole() {
