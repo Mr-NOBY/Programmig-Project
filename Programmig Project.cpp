@@ -1,5 +1,6 @@
 ﻿#include<iostream>
 #include "User.h"
+#include "Uni.h"
 using namespace std;
 
 int main()
@@ -67,3 +68,19 @@ int main()
     return 0;
 }
 
+
+// int main() {
+//     Uni msa;
+//     msa.addCollege();
+//     msa.addCollege();
+//     msa.addDepartment();
+//     msa.addDepartment();
+//     vector<string> collgs = msa.getColleges();
+//     vector<string> departs = msa.getDeparments();
+//     for(int i=0; i<collgs.size();i++) {
+//         cout << collgs[i] << " / ";
+//     }
+//     for(int i=0; i<departs.size(); i++) {
+//         cout << departs[i] <<" / ";
+//     }
+// }
