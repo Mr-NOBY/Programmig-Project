@@ -1,8 +1,4 @@
-﻿// Programmig Project.cpp : Defines the entry point for the application.
-//
-
-#include "Programmig Project.h"
-
+﻿#include<iostream>
 using namespace std;
 
 int main()
