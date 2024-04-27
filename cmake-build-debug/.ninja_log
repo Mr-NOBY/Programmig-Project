@@ -1,0 +1,11 @@
+# ninja log v5
+0	519	7359209142711192	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
+4	520	7359209142733766	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
+521	699	7359209144502091	CMakeTarget.exe	9b8179cb52a4b422
+3	444	7359212247669818	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
+444	523	7359212248440819	CMakeTarget.exe	9b8179cb52a4b422
+3	408	7359214000079405	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
+7	417	7359214000161012	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
+417	493	7359214000897063	CMakeTarget.exe	9b8179cb52a4b422
+2	404	7359214496249939	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
+404	478	7359214496967400	CMakeTarget.exe	9b8179cb52a4b422
