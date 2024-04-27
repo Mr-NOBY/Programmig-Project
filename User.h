@@ -21,7 +21,8 @@ public:
     void setRole(string urole);
     void setEmail(string uemail);
     void setPassword(string upass);
-
+    string getUsername() const;
+    string getPassword() const;
 };
 
 #endif

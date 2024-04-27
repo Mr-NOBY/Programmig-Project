@@ -19,6 +19,7 @@ void User::login() {
     }
     else {
         cout << "Login failed. Incorrect username or password." << endl;
+        login();
     }
 }
 
@@ -52,3 +53,11 @@ void User::setPassword(std::string upass) {
 }
 
 User::User() {}
+
+string User::getUsername() const {
+    return username;
+}
+
+string User::getPassword() const {
+    return password;
+}

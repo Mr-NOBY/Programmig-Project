@@ -15,7 +15,22 @@ int main()
     cin >> password;
 
     User user(username, role, email, password);
-    user.login();
+    bool loggedIn = false;
+    while (!loggedIn) {
+        string input_username, input_password;
+        cout << "Enter username: ";
+        cin >> input_username;
+        cout << "Enter password: ";
+        cin >> input_password;
+
+        // Authenticate user
+        if (input_username == user.getUsername() && input_password == user.getPassword()) {
+            loggedIn = true;
+            cout << "User " << username << " logged in successfully." << std::endl;
+        } else {
+            cout << "Authentication failed. Incorrect username or password. Try again." << std::endl;
+        }
+    }
 
     int choice;
     do {
