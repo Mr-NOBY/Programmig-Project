@@ -25,6 +25,7 @@ void User::login() {
 
 void User::logout() {
     cout << "User " << username << " logged out." << std::endl;
+    login();
 }
 
 void User::changePassword(const string& new_password) {
