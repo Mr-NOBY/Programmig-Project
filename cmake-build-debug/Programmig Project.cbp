@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Course.cpp">
+			<Option target="CMakeTarget"/>
+		</Unit>
+		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Course.h">
+			<Option target="CMakeTarget"/>
+		</Unit>
 		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Programmig Project.cpp">
 			<Option target="CMakeTarget"/>
 		</Unit>

@@ -16,7 +16,9 @@ add_executable (CMakeTarget "Programmig Project.cpp"
         User.cpp
         User.h
         Uni.cpp
-        Uni.h)
+        Uni.h
+        Course.cpp
+        Course.h)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CMakeTarget PROPERTY CXX_STANDARD 20)

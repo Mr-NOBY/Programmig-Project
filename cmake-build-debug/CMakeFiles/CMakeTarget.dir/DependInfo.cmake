@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Course.cpp" "CMakeFiles/CMakeTarget.dir/Course.cpp.obj" "gcc" "CMakeFiles/CMakeTarget.dir/Course.cpp.obj.d"
   "C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Programmig Project.cpp" "CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj" "gcc" "CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj.d"
   "C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Uni.cpp" "CMakeFiles/CMakeTarget.dir/Uni.cpp.obj" "gcc" "CMakeFiles/CMakeTarget.dir/Uni.cpp.obj.d"
   "C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/User.cpp" "CMakeFiles/CMakeTarget.dir/User.cpp.obj" "gcc" "CMakeFiles/CMakeTarget.dir/User.cpp.obj.d"

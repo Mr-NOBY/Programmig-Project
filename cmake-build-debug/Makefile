@@ -128,6 +128,30 @@ CMakeTarget/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/build
 .PHONY : CMakeTarget/fast
 
+Course.obj: Course.cpp.obj
+.PHONY : Course.obj
+
+# target to build an object file
+Course.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/Course.cpp.obj
+.PHONY : Course.cpp.obj
+
+Course.i: Course.cpp.i
+.PHONY : Course.i
+
+# target to preprocess a source file
+Course.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/Course.cpp.i
+.PHONY : Course.cpp.i
+
+Course.s: Course.cpp.s
+.PHONY : Course.s
+
+# target to generate assembly for a file
+Course.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/Course.cpp.s
+.PHONY : Course.cpp.s
+
 Programmig_Project.obj: Programmig_Project.cpp.obj
 .PHONY : Programmig_Project.obj
 
@@ -209,6 +233,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CMakeTarget
+	@echo ... Course.obj
+	@echo ... Course.i
+	@echo ... Course.s
 	@echo ... Programmig_Project.obj
 	@echo ... Programmig_Project.i
 	@echo ... Programmig_Project.s
