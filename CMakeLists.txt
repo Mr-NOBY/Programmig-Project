@@ -17,6 +17,9 @@ add_executable (CMakeTarget "Programmig Project.cpp"
         User.h
         Uni.cpp
         Uni.h
+        AcademicStaff.cpp
+        AcademicStaff.h
+        Uni.h
         Course.cpp
         Course.h)
 

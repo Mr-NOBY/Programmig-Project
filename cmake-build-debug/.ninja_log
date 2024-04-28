@@ -1,26 +1,4 @@
 # ninja log v5
-0	519	7359209142711192	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-4	520	7359209142733766	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
-521	699	7359209144502091	CMakeTarget.exe	9b8179cb52a4b422
-3	444	7359212247669818	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-444	523	7359212248440819	CMakeTarget.exe	9b8179cb52a4b422
-3	408	7359214000079405	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-7	417	7359214000161012	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
-417	493	7359214000897063	CMakeTarget.exe	9b8179cb52a4b422
-2	404	7359214496249939	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-404	478	7359214496967400	CMakeTarget.exe	9b8179cb52a4b422
-3	559	7359439693819945	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-27	562	7359439693850299	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
-562	784	7359439696049242	CMakeTarget.exe	9b8179cb52a4b422
-2	402	7359442551361863	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-402	489	7359442552209500	CMakeTarget.exe	9b8179cb52a4b422
-3	391	7359444186136971	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-392	465	7359444186855055	CMakeTarget.exe	9b8179cb52a4b422
-2	417	7359448347594428	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-7	423	7359448347655337	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
-423	499	7359448348379108	CMakeTarget.exe	9b8179cb52a4b422
-3	413	7359454004792167	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-8	428	7359454004932828	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
-428	503	7359454005665030	CMakeTarget.exe	9b8179cb52a4b422
 2	397	7359457063466481	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
+8	428	7359454004932828	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
 398	477	7359457064235397	CMakeTarget.exe	9b8179cb52a4b422
