@@ -38,13 +38,6 @@ void Course::listEnrolledStu() {
     }
 }
 
-void Course::addCourseMaterial() {
-    string material;
-    cout << "Please enter material: ";
-    getline(cin, material);
-    materials.push_back(material);
-    cout << materials[materials.size()-1] << " was added successfully";
-}
 
 
 

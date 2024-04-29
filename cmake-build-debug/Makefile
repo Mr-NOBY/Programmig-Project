@@ -128,6 +128,30 @@ CMakeTarget/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/build
 .PHONY : CMakeTarget/fast
 
+AcademicStaff.obj: AcademicStaff.cpp.obj
+.PHONY : AcademicStaff.obj
+
+# target to build an object file
+AcademicStaff.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/AcademicStaff.cpp.obj
+.PHONY : AcademicStaff.cpp.obj
+
+AcademicStaff.i: AcademicStaff.cpp.i
+.PHONY : AcademicStaff.i
+
+# target to preprocess a source file
+AcademicStaff.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/AcademicStaff.cpp.i
+.PHONY : AcademicStaff.cpp.i
+
+AcademicStaff.s: AcademicStaff.cpp.s
+.PHONY : AcademicStaff.s
+
+# target to generate assembly for a file
+AcademicStaff.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/AcademicStaff.cpp.s
+.PHONY : AcademicStaff.cpp.s
+
 Course.obj: Course.cpp.obj
 .PHONY : Course.obj
 
@@ -175,6 +199,30 @@ Programmig_Project.s: Programmig_Project.cpp.s
 Programmig_Project.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.s
 .PHONY : Programmig_Project.cpp.s
+
+Student.obj: Student.cpp.obj
+.PHONY : Student.obj
+
+# target to build an object file
+Student.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/Student.cpp.obj
+.PHONY : Student.cpp.obj
+
+Student.i: Student.cpp.i
+.PHONY : Student.i
+
+# target to preprocess a source file
+Student.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/Student.cpp.i
+.PHONY : Student.cpp.i
+
+Student.s: Student.cpp.s
+.PHONY : Student.s
+
+# target to generate assembly for a file
+Student.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMakeTarget.dir\build.make CMakeFiles/CMakeTarget.dir/Student.cpp.s
+.PHONY : Student.cpp.s
 
 Uni.obj: Uni.cpp.obj
 .PHONY : Uni.obj
@@ -233,12 +281,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CMakeTarget
+	@echo ... AcademicStaff.obj
+	@echo ... AcademicStaff.i
+	@echo ... AcademicStaff.s
 	@echo ... Course.obj
 	@echo ... Course.i
 	@echo ... Course.s
 	@echo ... Programmig_Project.obj
 	@echo ... Programmig_Project.i
 	@echo ... Programmig_Project.s
+	@echo ... Student.obj
+	@echo ... Student.i
+	@echo ... Student.s
 	@echo ... Uni.obj
 	@echo ... Uni.i
 	@echo ... Uni.s

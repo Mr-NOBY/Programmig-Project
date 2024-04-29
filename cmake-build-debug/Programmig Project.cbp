@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/AcademicStaff.cpp">
+			<Option target="CMakeTarget"/>
+		</Unit>
+		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/AcademicStaff.h">
+			<Option target="CMakeTarget"/>
+		</Unit>
 		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Course.cpp">
 			<Option target="CMakeTarget"/>
 		</Unit>
@@ -89,6 +95,12 @@
 			<Option target="CMakeTarget"/>
 		</Unit>
 		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Programmig Project.cpp">
+			<Option target="CMakeTarget"/>
+		</Unit>
+		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Student.cpp">
+			<Option target="CMakeTarget"/>
+		</Unit>
+		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Student.h">
 			<Option target="CMakeTarget"/>
 		</Unit>
 		<Unit filename="C:/Users/Ahmed Essam/CLionProjects/Programmig-Project/Uni.cpp">

@@ -16,10 +16,8 @@ protected:
     string id;
     int cHours; //credit hours
     vector<string> enrolledStudents;
-    vector<string> materials;
 public:
     Course();
-    void addCourseMaterial();
     void updateCredits();
     void viewCourseDetails();
     void listEnrolledStu();
