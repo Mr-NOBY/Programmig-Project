@@ -18,9 +18,11 @@ protected:
     vector<string> enrolledStudents;
 public:
     Course();
+    string getCourseID();
     void updateCredits();
     void viewCourseDetails();
     void listEnrolledStu();
+    void enrollStudent(const string&);
 };
 
 

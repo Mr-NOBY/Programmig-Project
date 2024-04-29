@@ -8,11 +8,12 @@
 
 
 Course::Course() {
+    cin.ignore();
     cout << "\nPlease enter course Name: ";
     getline(cin, name);
     cout << "\nDepartment of Course: ";
     getline(cin, department);
-    cout << "\nCouse ID";
+    cout << "\nCourse ID: ";
     getline(cin, id);
     cout << "\nCredit Hours: ";
     cin >> cHours;
@@ -37,6 +38,16 @@ void Course::listEnrolledStu() {
         cout << enrolledStudents[i] << endl;
     }
 }
+
+void Course::enrollStudent(const string& stName) {
+    enrolledStudents.push_back(stName); //not working
+}
+
+string Course::getCourseID() {
+    return id;
+}
+
+
 
 
 

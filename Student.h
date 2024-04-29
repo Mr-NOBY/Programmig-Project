@@ -8,6 +8,8 @@
 #include <vector>
 #include <map>
 
+#include "Course.h"
+
 
 // Student:
 // Attributes:
@@ -31,7 +33,7 @@ protected:
 
 public:
     Student();
-    void enrollCourse();
+    void enrollCourse(Course);
     void viewTranscript();
     void calculateGPA();
     void updateGrade();
