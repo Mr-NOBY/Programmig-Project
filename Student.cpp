@@ -43,7 +43,7 @@ void Student::updateGrade() {
 void Student::viewTranscript() {
     cout << "\nTranscript: ";
     cout << "Name: " << name << "\tID: " << studentID ;
-    cout "\n___________________________________________\n";
+    cout << "\n___________________________________________\n";
     cout <<"Course ID \tGrade\n";
     for(auto i = grades.begin(); i !=grades.end(); i++) {
         cout << i->first <<" \t" << i->second << endl;
