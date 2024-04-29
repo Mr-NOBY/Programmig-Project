@@ -1,12 +1,19 @@
 # ninja log v5
-2	397	7359457063466481	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
-8	428	7359454004932828	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
-398	477	7359457064235397	CMakeTarget.exe	9b8179cb52a4b422
-3	660	7360066048854372	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
 28	661	7360066048854372	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
+3	580	7360329423817642	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
+580	794	7360329425918342	CMakeTarget.exe	c54aaf22868658f6
 41	670	7360066048962172	CMakeFiles/CMakeTarget.dir/Course.cpp.obj	79af8251e8fd5175
 32	673	7360066048985947	CMakeFiles/CMakeTarget.dir/AcademicStaff.cpp.obj	ce869888cfab62c5
 37	691	7360066049166662	CMakeFiles/CMakeTarget.dir/Uni.cpp.obj	6bbb1729c2690ccb
-691	836	7360066050601017	CMakeTarget.exe	c54aaf22868658f6
-3	580	7360329423817642	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
-580	794	7360329425918342	CMakeTarget.exe	c54aaf22868658f6
+3	755	7361191834476558	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
+30	763	7361191834547354	CMakeFiles/CMakeTarget.dir/Course.cpp.obj	79af8251e8fd5175
+33	764	7361191834557394	CMakeFiles/CMakeTarget.dir/AcademicStaff.cpp.obj	ce869888cfab62c5
+36	769	7361191834615217	CMakeFiles/CMakeTarget.dir/Uni.cpp.obj	6bbb1729c2690ccb
+39	853	7361191835447531	CMakeFiles/CMakeTarget.dir/Student.cpp.obj	fa7392b40595e49
+3	529	7361192166662533	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
+530	787	7361192169227977	CMakeTarget.exe	737784ac58977bee
+9	2628	7361199751392750	CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj	1495ebaeb9bba42e
+4	2631	7361199751423129	CMakeFiles/CMakeTarget.dir/User.cpp.obj	5839b06fade9e1f8
+12	2637	7361199751484015	CMakeFiles/CMakeTarget.dir/AcademicStaff.cpp.obj	ce869888cfab62c5
+15	2645	7361199751572553	CMakeFiles/CMakeTarget.dir/Student.cpp.obj	fa7392b40595e49
+2646	2761	7361199752697368	CMakeTarget.exe	737784ac58977bee

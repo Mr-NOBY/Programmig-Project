@@ -89,6 +89,14 @@ build CMakeFiles/CMakeTarget.dir/Course.cpp.obj: CXX_COMPILER__CMakeTarget_unsca
   TARGET_COMPILE_PDB = CMakeFiles\CMakeTarget.dir\
   TARGET_PDB = CMakeTarget.pdb
 
+build CMakeFiles/CMakeTarget.dir/Student.cpp.obj: CXX_COMPILER__CMakeTarget_unscanned_Debug C$:/Users/engah/OneDrive/Desktop/Prog$ II/Programmig-Project/Student.cpp || cmake_object_order_depends_target_CMakeTarget
+  DEP_FILE = CMakeFiles\CMakeTarget.dir\Student.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\CMakeTarget.dir
+  OBJECT_FILE_DIR = CMakeFiles\CMakeTarget.dir
+  TARGET_COMPILE_PDB = CMakeFiles\CMakeTarget.dir\
+  TARGET_PDB = CMakeTarget.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CMakeTarget
@@ -97,7 +105,7 @@ build CMakeFiles/CMakeTarget.dir/Course.cpp.obj: CXX_COMPILER__CMakeTarget_unsca
 #############################################
 # Link the executable CMakeTarget.exe
 
-build CMakeTarget.exe: CXX_EXECUTABLE_LINKER__CMakeTarget_Debug CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj CMakeFiles/CMakeTarget.dir/User.cpp.obj CMakeFiles/CMakeTarget.dir/Uni.cpp.obj CMakeFiles/CMakeTarget.dir/AcademicStaff.cpp.obj CMakeFiles/CMakeTarget.dir/Course.cpp.obj
+build CMakeTarget.exe: CXX_EXECUTABLE_LINKER__CMakeTarget_Debug CMakeFiles/CMakeTarget.dir/Programmig_Project.cpp.obj CMakeFiles/CMakeTarget.dir/User.cpp.obj CMakeFiles/CMakeTarget.dir/Uni.cpp.obj CMakeFiles/CMakeTarget.dir/AcademicStaff.cpp.obj CMakeFiles/CMakeTarget.dir/Course.cpp.obj CMakeFiles/CMakeTarget.dir/Student.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CMakeTarget.dir
