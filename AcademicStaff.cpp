@@ -35,7 +35,7 @@ void AcademicStaff::gradeAssignment(const string& studentName, double assignment
 
 }
 
-void AcademicStaff::viewStudentList(const vector<std::string>& studentList) {
+void AcademicStaff::viewStudentList(const vector<string>& studentList) {
     if (studentList.empty()) {
         cout << "No students enrolled in courses taught by " << name << "." << endl;
     } else {
@@ -45,7 +45,7 @@ void AcademicStaff::viewStudentList(const vector<std::string>& studentList) {
         }
     }
 }
-}
+
 
 void AcademicStaff::scheduleOfficeHours(const string& officeHours) {
     OfficeHours = officeHours;
