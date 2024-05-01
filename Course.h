@@ -11,18 +11,19 @@ using namespace std;
 
 class Course {
 protected:
+    static vector<string> coursesList;
     string name;
     string department;
     string id;
     int cHours; //credit hours
-    vector<string> enrolledStudents;
+    vector<int> enrolledStudents;
 public:
     Course();
     string getCourseID();
     void updateCredits();
     void viewCourseDetails();
     void listEnrolledStu();
-    void enrollStudent(const string&);
+    void enrollStudent(const int&);
 };
 
 

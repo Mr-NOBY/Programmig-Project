@@ -29,13 +29,13 @@ protected:
     int studentID;
     string name;
     vector<string> coursesEnrolled;
-    map<string, int> grades;
+    map<string, float> grades;
 
 public:
-    Student();
-    void enrollCourse(Course);
+    Student(Course[], int);
+    void enrollCourse(Course[], int, int);
     void viewTranscript();
-    void calculateGPA();
+    float calculateGPA();
     void updateGrade();
 };
 

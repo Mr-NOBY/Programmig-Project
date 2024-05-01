@@ -6,17 +6,19 @@
 
 #include <iostream>
 
+vector<string> Course::coursesList;
 
 Course::Course() {
-    cin.ignore();
     cout << "\nPlease enter course Name: ";
     getline(cin, name);
-    cout << "\nDepartment of Course: ";
+    cout << "Department of Course: ";
     getline(cin, department);
-    cout << "\nCourse ID: ";
+    cout << "Course ID: ";
     getline(cin, id);
-    cout << "\nCredit Hours: ";
+    cout << "Credit Hours: ";
     cin >> cHours;
+    cin.ignore();
+    coursesList.push_back(id);
 }
 
 void Course::updateCredits() {
@@ -29,7 +31,7 @@ void Course::viewCourseDetails() {
     cout << "\nCourse ID: " << id;
     cout << "\nDepartment: " <<department;
     cout << "\nCredit Hours: " <<cHours;
-    cout << "\nNo. of Students Enrolled: "<< enrolledStudents.size();
+    cout << "\nNo. of Students Enrolled: "<< enrolledStudents.size() <<endl;
 }
 
 void Course::listEnrolledStu() {
@@ -39,8 +41,8 @@ void Course::listEnrolledStu() {
     }
 }
 
-void Course::enrollStudent(const string& stName) {
-    enrolledStudents.push_back(stName); //not working
+void Course::enrollStudent(const int& stID) {
+    enrolledStudents.push_back(stID); //not working
 }
 
 string Course::getCourseID() {

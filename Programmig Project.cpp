@@ -45,3 +45,13 @@ using namespace std;
 //     c1.updateCredits();
 //     c1.viewCourseDetails();
 // }
+
+// int main() {
+//  Course courses[2];
+//  courses[0].viewCourseDetails();
+//  courses[1].viewCourseDetails();
+//  Student a(courses, 2);
+//  courses[0].viewCourseDetails();
+//  courses[1].viewCourseDetails();
+//  a.viewTranscript();
+// }
