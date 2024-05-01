@@ -42,7 +42,7 @@ void Course::listEnrolledStu() {
 }
 
 void Course::enrollStudent(const int& stID) {
-    enrolledStudents.push_back(stID); //not working
+    enrolledStudents.push_back(stID);
 }
 
 string Course::getCourseID() {
