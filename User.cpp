@@ -3,9 +3,25 @@
 #include <string>
 using namespace std;
 
-User::User(const string& username, const string& role,
-           const string& email, const string& password)
-        : username(username), role(role), email(email), password(password) {}
+// User::User(const string& username, const string& role,
+//           const string& email, const string& password)
+//         : username(username), role(role), email(email), password(password) {}
+
+User::User() {
+    string u, r, e, p; // username role email password
+    cout << "Enter username: ";
+    cin >> u;
+    username = u;
+    cout << "Enter role (Academic staff, Student): ";
+    cin >> r;
+    role = r;
+    cout << "Enter email address: ";
+    cin >> e;
+    email = e;
+    cout << "Enter password: ";
+    cin >> p;
+    password = p;
+}
 
 void User::login() {
     string input_username, input_password;
@@ -24,7 +40,7 @@ void User::login() {
 }
 
 void User::logout() {
-    cout << "User " << username << " logged out." << std::endl;
+    cout << "User " << username << " logged out." << endl;
     login();
 }
 
@@ -37,28 +53,4 @@ string User::getUserRole() {
     return role;
 }
 
-void User::setUser(string uname) {
-    username = uname;
-}
 
-void User::setEmail(string uemail) {
-email = uemail;
-}
-
-void User::setRole(string urole) {
-    role =urole;
-}
-
-void User::setPassword(std::string upass) {
-    password= upass;
-}
-
-User::User() {}
-
-string User::getUsername() const {
-    return username;
-}
-
-string User::getPassword() const {
-    return password;
-}
