@@ -4,7 +4,7 @@
 
 class Menu {
 protected:
-    int choice{};
+    int choice;
 public:
     void displayMenu(User*);
 };

@@ -3,17 +3,20 @@
 #include "User.h"
 #include "Uni.h"
 #include "Menu.h"
+#include "AcademicStaff.h"
+#include "Student.h"
+#include "Uni.h"
 using namespace std;
 
- // int main()
- // {
- //     User user;
- //     Menu menu;
- //     user.login();
- //     menu.displayMenu(&user);
- //
- //     return 0;
- // }
+  int main()
+  {
+      User user;
+      Menu menu;
+      user.login();
+      menu.displayMenu(&user);
+
+      return 0;
+  }
 
 
 // int main() {
