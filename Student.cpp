@@ -36,6 +36,21 @@ void Student::updateGrade() {
     }
 }
 
+int Student::noOfEnrolledcourses() {
+    return coursesEnrolled.size();
+}
+int Student::getID() {
+    return studentID;
+}
+string Student::getName() {
+    return name;
+}
+string Student::getEmail() {
+    return email;
+}
+
+
+
 void Student::viewTranscript() {
     cout << "\nTranscript: ";
     cout << "Name: " << name << "\tID: " << studentID ;

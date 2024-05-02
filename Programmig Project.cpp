@@ -1,4 +1,6 @@
 ﻿#include<iostream>
+
+#include "File.h"
 #include "Student.h"
 #include "User.h"
 #include "Uni.h"
@@ -57,4 +59,11 @@ using namespace std;
 //  courses[0].viewCourseDetails();
 //  courses[1].viewCourseDetails();
 //  a.viewTranscript();
+//  courses[0].listEnrolledStu();
+//  courses[1].listEnrolledStu();
+//  File course;
+//  string courseInfo = course.formatData(courses, 2);
+//  course.writeData(courseInfo);
+//  string studentInfo = course.formatData(&a, 1);
+//  course.writeData(studentInfo);
 // }

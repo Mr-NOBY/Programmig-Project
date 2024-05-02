@@ -37,6 +37,10 @@ public:
     void viewTranscript();
     float calculateGPA();
     void updateGrade();
+    int getID();
+    string getName();
+    string getEmail();
+    int noOfEnrolledcourses();
 };
 
 

@@ -20,6 +20,10 @@ protected:
 public:
     Course();
     string getCourseID();
+    string getCourseName();
+    string getCourseDepartment();
+    int getCredHours();
+    int getNoEnrolled();
     void updateCredits();
     void viewCourseDetails();
     void listEnrolledStu();

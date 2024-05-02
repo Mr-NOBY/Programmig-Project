@@ -10,25 +10,25 @@ using namespace std;
 User::User() {
     string u, r, e, p; // username role email password
     cout << "Enter username: ";
-    cin >> u;
+    getline(cin, u);
     username = u;
     cout << "Enter role (Academic staff, Student): ";
-    cin >> r;
+    getline(cin, r);
     role = r;
     cout << "Enter email address: ";
-    cin >> e;
+    getline(cin, e);
     email = e;
     cout << "Enter password: ";
-    cin >> p;
+    getline(cin, p);
     password = p;
 }
 
 void User::login() {
     string input_username, input_password;
     cout << "Enter username: ";
-    cin >> input_username;
+    getline(cin, input_username);
     cout << "Enter password: ";
-    cin >> input_password;
+    getline(cin, input_password);
 
     if (input_username == username && input_password == password) {
         cout << "User " << username << " logged in successfully." << endl;

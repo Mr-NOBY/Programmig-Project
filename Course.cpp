@@ -49,6 +49,26 @@ string Course::getCourseID() {
     return id;
 }
 
+string Course::getCourseName() {
+    return name;
+}
+
+string Course::getCourseDepartment() {
+    return department;
+}
+
+int Course::getCredHours() {
+    return cHours;
+}
+
+int Course::getNoEnrolled() {
+    return enrolledStudents.size();
+}
+
+
+
+
+
 
 
 
