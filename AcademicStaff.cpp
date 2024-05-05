@@ -4,9 +4,10 @@
 #include <string>
 using namespace std;
 
-AcademicStaff::AcademicStaff(const string& staff_id, const string& name,
-                             const string& department)
-        : staff_id(staff_id), name(name), department(department) {}
+AcademicStaff::AcademicStaff()
+{
+//    get el hagat hena
+}
 
 void AcademicStaff::addCourseTaught(const string& course) {
     courses_taught.push_back(course);

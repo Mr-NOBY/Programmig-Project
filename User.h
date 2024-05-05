@@ -12,13 +12,14 @@ protected:
 
 public:
     User();
-  //  User(const string& username, const string& role, const string& email, const string& password);
     void login();
     void logout();
     void changePassword(const string& new_password);
     string getUserRole();
-
+    void displayEncryptedPassword();
 };
+
+string caesarCipher(const string str, int shift);
 
 #endif
 

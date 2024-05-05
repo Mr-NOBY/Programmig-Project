@@ -14,7 +14,7 @@ protected:
     vector<string> courses_taught;
     string OfficeHours;
 
-public:AcademicStaff(const string& staff_id, const string& name, const string& department);
+public:AcademicStaff();
     void addCourseTaught(const string& course);
     vector<string> getCoursesTaught() const;
     string getStaffID() const;

@@ -1,5 +1,5 @@
 ﻿#include<iostream>
-
+#include <vector>
 #include "File.h"
 #include "Student.h"
 #include "User.h"
@@ -13,10 +13,14 @@ using namespace std;
   int main()
   {
       User user;
+      Uni uni;
+       vector<Course> course ;
+       vector<Student> student;
+//      AcademicStaff staff;
       Menu menu;
       user.login();
       menu.displayMenu(&user);
-
+//      user.displayEncryptedPassword();
       return 0;
   }
 
