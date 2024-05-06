@@ -32,8 +32,8 @@ protected:
     map<string, float> grades;
 
 public:
-    Student(Course[], int);
-    void enrollCourse(Course[], int, int);
+    Student(vector<Course>&);
+    void enrollCourse(vector<Course>&, int);
     void viewTranscript();
     float calculateGPA();
     void updateGrade();

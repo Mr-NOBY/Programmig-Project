@@ -5,7 +5,7 @@
 #include "Student.h"
 #include "Course.h"
 
-Student::Student(Course c[], int size) {
+Student::Student(vector<Course>& c) {
     int n; //temp for no. of courses
     // int g; //temp for grade
     // string c; //temp for course id
@@ -17,7 +17,7 @@ Student::Student(Course c[], int size) {
     cin >> n;
     cin.ignore();
     for (int i = 0; i<n; i++) {
-        enrollCourse(c, size, i);
+        enrollCourse(c, i);
     }
 }
 
@@ -72,7 +72,7 @@ float Student::calculateGPA() {
     return gpa;
 }
 
-void Student::enrollCourse(Course c[], int size, int nIters) {
+void Student::enrollCourse(vector<Course>& c, int nIters) {
     string cID; // temp for course ID
     float g; // temp for grade
 
@@ -80,7 +80,7 @@ void Student::enrollCourse(Course c[], int size, int nIters) {
         cout << "\nCourse " << nIters + 1 << " ID: ";
         getline(cin, cID);
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < c.size(); i++) {
             if (cID == c[i].getCourseID()) {
                 coursesEnrolled.push_back(cID);
                 cout << "Enter GPA of course " << cID << ": ";

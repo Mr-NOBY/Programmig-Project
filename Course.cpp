@@ -21,6 +21,14 @@ Course::Course() {
     coursesList.push_back(id);
 }
 
+Course::Course(string cID, string cName, string cDepart, int cCreditHours ) {
+    id = cID;
+    name = cName;
+    department = cDepart;
+    cHours = cCreditHours;
+    Course::coursesList.push_back(id);
+}
+
 void Course::updateCredits() {
     cout << "\nEnter the new course Credit Hours: ";
     cin >>cHours;
@@ -42,6 +50,7 @@ void Course::listEnrolledStu() {
 }
 
 void Course::enrollStudent(const int& stID) {
+    // cout << stID;
     enrolledStudents.push_back(stID);
 }
 
