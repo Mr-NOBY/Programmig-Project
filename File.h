@@ -5,18 +5,18 @@
 #ifndef FILE_H
 #define FILE_H
 #include <memory>
-
+#include<variant>
 #include "Course.h"
 #include "Student.h"
 
 
 class File {
 public:
-    void readData();
+    vector<string> readData();
     void writeData(string);
-    void parseData();
-    string formatData(Course*, int);
+    string formatData(vector<Course>, int);
     string formatData(Student*, int);
+    variant<vector<Course>, vector<Student>> parseData(vector<string>);
 };
 
 

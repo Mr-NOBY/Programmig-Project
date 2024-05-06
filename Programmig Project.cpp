@@ -10,19 +10,19 @@
 #include "Uni.h"
 using namespace std;
 
-  int main()
-  {
-      User user;
-      Uni uni;
-       vector<Course> course ;
-       vector<Student> student;
-//      AcademicStaff staff;
-      Menu menu;
-      user.login();
-      menu.displayMenu(&user);
-//      user.displayEncryptedPassword();
-      return 0;
-  }
+//   int main()
+//   {
+//       User user;
+//       Uni uni;
+//        vector<Course> course ;
+//        vector<Student> student;
+// //      AcademicStaff staff;
+//       Menu menu;
+//       user.login();
+//       menu.displayMenu(&user);
+// //      user.displayEncryptedPassword();
+//       return 0;
+//   }
 
 
 // int main() {
@@ -56,18 +56,47 @@ using namespace std;
 // }
 
 // int main() {
-//  Course courses[2];
-//  courses[0].viewCourseDetails();
-//  courses[1].viewCourseDetails();
-//  Student a(courses, 2);
-//  courses[0].viewCourseDetails();
-//  courses[1].viewCourseDetails();
-//  a.viewTranscript();
-//  courses[0].listEnrolledStu();
-//  courses[1].listEnrolledStu();
-//  File course;
-//  string courseInfo = course.formatData(courses, 2);
-//  course.writeData(courseInfo);
-//  string studentInfo = course.formatData(&a, 1);
-//  course.writeData(studentInfo);
+//     vector<Course> courses;
+//     Course c1;
+//     courses.push_back(c1);
+//     Course c2;
+//     courses.push_back(c2);
+//     courses[0].viewCourseDetails();
+//     courses[1].viewCourseDetails();
+//     Student a(courses);
+//     courses[0].viewCourseDetails();
+//     courses[1].viewCourseDetails();
+//     a.viewTranscript();
+//     courses[0].listEnrolledStu();
+//     courses[1].listEnrolledStu();
+//     File course;
+//     // string courseInfo = course.formatData(courses, 2);
+//     // course.writeData(courseInfo);
+//     // string studentInfo = course.formatData(&a, 1);
+//     // course.writeData(studentInfo);
+//     vector<string> courseData = course.readData();
+//     // vector<string> studenntData = course.readData();
+//     variant<vector<Course>, vector<Student>> n = course.parseData(courseData);
+//     if (holds_alternative<vector<Course>>(n)) {
+//         vector<Course> newCourses = get<vector<Course>>(n);
+//         for(int i =0; i < newCourses.size(); i++) {
+//             bool isNew = true;
+//             for(int j =0; j<courses.size(); j++) {
+//                 if(newCourses[i].getCourseID() == courses[j].getCourseID()) {
+//                     isNew = false;
+//                     break;
+//                 }
+//             }
+//             if (isNew) {
+//                 courses.push_back(newCourses[i]);
+//             }
+//         }
+//
+//     }
+//
+//     for (int k = 0; k< courses.size(); k++) {
+//         courses[k].viewCourseDetails();
+//     }
+//     // courses.push_back(n);
+//     // course.parseData<Student>(studenntData);
 // }
