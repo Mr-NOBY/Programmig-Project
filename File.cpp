@@ -6,9 +6,9 @@
 #include <fstream>
 #include <sstream>
 
-string File::formatData(vector<Course> c, int size) {
+string File::formatData(vector<Course> c) {
     string formatedData = "ID, Name, Department, Credit Hours, No of Students\n";
-    for (int i = 0 ; i<size; i++) {
+    for (int i = 0 ; i<c.size(); i++) {
         formatedData += (c[i].getCourseID() + ", "
                         + c[i].getCourseName() + ", "
                         + c[i].getCourseDepartment() + ", "
@@ -19,14 +19,14 @@ string File::formatData(vector<Course> c, int size) {
     return formatedData;
 }
 
-string File::formatData(Student *s, int size) {
+string File::formatData(vector<Student> s) {
     string formatedData = "ID, Name, Email, No of Courses, GPA\n";
-    for(int i =0; i<size; i++) {
-        formatedData += (to_string((s+i)->getID()) + ", "
-                        +(s+i)->getName() + ", "
-                        +(s+i)->getEmail() + ", "
-                        +to_string((s+i)->noOfEnrolledcourses()) + ", "
-                        +to_string((s+i)->calculateGPA()) + "\n"
+    for(int i =0; i<s.size(); i++) {
+        formatedData += (to_string(s[i].getID()) + ", "
+                        +s[i].getName() + ", "
+                        +s[i].getEmail() + ", "
+                        +to_string(s[i].noOfEnrolledcourses()) + ", "
+                        +to_string(s[i].calculateGPA()) + "\n"
                         );
     }
     return formatedData;
@@ -67,11 +67,10 @@ vector<string> File::readData() {
 }
 
 
-variant<vector<Course>, vector<Student>> File::parseData(vector<string> data) {
+variant<vector<Course>, vector<Student>> File::parseData(vector<string>& data, vector<Course>&c) {
     vector<Course> newCourses;
     vector<Student> newStudents;
-    for (int i = 1; i< data.size(); i++) {
-
+    for (int i = 1; i< (data.size()-1); i++) {
         vector<string> oneRow;
         stringstream ss(data[i]);
         while(ss.good()) {
@@ -79,18 +78,20 @@ variant<vector<Course>, vector<Student>> File::parseData(vector<string> data) {
             getline(ss, substr, ',');
             oneRow.push_back(substr);
         }
-
         if((oneRow[0][0] >= 'a' && oneRow[0][0] <= 'z') || (oneRow[0][0] >= 'A' && oneRow[0][0] <= 'Z')) {
-            Course c(oneRow[0], oneRow[1], oneRow[2], stoi(oneRow[3]));
-            newCourses.push_back(c);
+            Course nc(oneRow[0], oneRow[1], oneRow[2], stoi(oneRow[3]));
+            newCourses.push_back(nc);
         } else {
-
-            // Student x;
+            if (i < data.size()) {
+                Student s(stoi(oneRow[0]), oneRow[1], oneRow[2], stoi(oneRow[3]), c );
+                newStudents.push_back(s);
+            }
         }
   }
     if(!newCourses.empty())
         return newCourses;
-
+    if(!newStudents.empty())
+        return newStudents;
 
 }
 

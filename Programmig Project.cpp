@@ -58,45 +58,70 @@ using namespace std;
 // int main() {
 //     vector<Course> courses;
 //     Course c1;
-//     courses.push_back(c1);
 //     Course c2;
+//     courses.push_back(c1);
 //     courses.push_back(c2);
 //     courses[0].viewCourseDetails();
 //     courses[1].viewCourseDetails();
-//     Student a(courses);
+//     vector<Student> students;
+//     Student s1(courses);
+//     Student s2(courses);
+//     students.push_back(s1);
+//     students.push_back(s2);
 //     courses[0].viewCourseDetails();
 //     courses[1].viewCourseDetails();
-//     a.viewTranscript();
+//     for (int s = 0 ; s< students.size();s++) {
+//         students[s].viewTranscript();
+//     }
 //     courses[0].listEnrolledStu();
 //     courses[1].listEnrolledStu();
 //     File course;
-//     // string courseInfo = course.formatData(courses, 2);
-//     // course.writeData(courseInfo);
-//     // string studentInfo = course.formatData(&a, 1);
-//     // course.writeData(studentInfo);
+//     string courseInfo = course.formatData(courses);
+//     course.writeData(courseInfo);
+//     string studentInfo = course.formatData(students);
+//     course.writeData(studentInfo);
 //     vector<string> courseData = course.readData();
 //     // vector<string> studenntData = course.readData();
-//     variant<vector<Course>, vector<Student>> n = course.parseData(courseData);
+//     variant<vector<Course>, vector<Student>> n = course.parseData(courseData, courses);
 //     if (holds_alternative<vector<Course>>(n)) {
-//         vector<Course> newCourses = get<vector<Course>>(n);
-//         for(int i =0; i < newCourses.size(); i++) {
-//             bool isNew = true;
-//             for(int j =0; j<courses.size(); j++) {
-//                 if(newCourses[i].getCourseID() == courses[j].getCourseID()) {
-//                     isNew = false;
-//                     break;
+//             vector<Course> newCourses = get<vector<Course>>(n);
+//             for(int i =0; i < newCourses.size(); i++) {
+//                 bool isNew = true;
+//                 for(int j =0; j<courses.size(); j++) {
+//                     if(newCourses[i].getCourseID() == courses[j].getCourseID()) {
+//                         isNew = false;
+//                         break;
+//                     }
+//                 }
+//                 if (isNew) {
+//                     courses.push_back(newCourses[i]);
 //                 }
 //             }
-//             if (isNew) {
-//                 courses.push_back(newCourses[i]);
+//             for (int k = 0; k< courses.size(); k++) {
+//                 courses[k].viewCourseDetails();
 //             }
-//         }
+//     } else {
+//         cout << "\ncheck the if condition\n";
+//             vector<Student> newStudents = get<vector<Student>>(n);
+//             for(int i =0; i < newStudents.size(); i++) {
+//                 bool isNew = true;
+//                 for(int j =0; j<students.size(); j++) {
+//                     if(newStudents[i].getID() == students[j].getID()) {
+//                         isNew = false;
+//                         break;
+//                     }
+//                 }
+//                 if (isNew) {
+//                     students.push_back(newStudents[i]);
+//                 }
+//             }
+//             for (int s = 0 ; s< students.size();s++) {
+//                 students[s].viewTranscript();
+//             }
 //
 //     }
 //
-//     for (int k = 0; k< courses.size(); k++) {
-//         courses[k].viewCourseDetails();
-//     }
+//
 //     // courses.push_back(n);
 //     // course.parseData<Student>(studenntData);
 // }

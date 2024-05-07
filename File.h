@@ -14,9 +14,9 @@ class File {
 public:
     vector<string> readData();
     void writeData(string);
-    string formatData(vector<Course>, int);
-    string formatData(Student*, int);
-    variant<vector<Course>, vector<Student>> parseData(vector<string>);
+    string formatData(vector<Course>);
+    string formatData(vector<Student>);
+    variant<vector<Course>, vector<Student>> parseData(vector<string>&, vector<Course>&);
 };
 
 
