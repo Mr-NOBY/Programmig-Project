@@ -21,6 +21,16 @@ Student::Student(vector<Course>& c) {
     }
 }
 
+Student::Student(int sId, string sName, string sEmail, int noCourses, vector<Course>& c) {
+    studentID= sId;
+    name = sName;
+    email = sEmail;
+    for (int i = 0; i<noCourses; i++) {
+        enrollCourse(c, i);
+    }
+}
+
+
 void Student::updateGrade() {
     string c; //temp for course id
     map<string, float>::iterator it ; //has the address of key-value pair;

@@ -33,6 +33,7 @@ protected:
 
 public:
     Student(vector<Course>&);
+    Student(int, string, string, int, vector<Course>&);
     void enrollCourse(vector<Course>&, int);
     void viewTranscript();
     float calculateGPA();

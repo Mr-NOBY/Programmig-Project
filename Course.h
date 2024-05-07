@@ -19,7 +19,7 @@ protected:
     vector<int> enrolledStudents;
 public:
     Course();
-    Course(string, string, string, int );
+    Course(string, string, string, int);
     string getCourseID();
     string getCourseName();
     string getCourseDepartment();
