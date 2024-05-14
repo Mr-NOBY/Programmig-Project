@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class AcademicStaff :public User {
+class AcademicStaff{
 protected:
     string staff_id;
     string name;
@@ -14,7 +14,8 @@ protected:
     vector<string> courses_taught;
     string OfficeHours;
 
-public:AcademicStaff();
+public:
+    AcademicStaff(const char *staff_id, const string& name, const string& department);
     void addCourseTaught(const string& course);
     vector<string> getCoursesTaught() const;
     string getStaffID() const;
@@ -23,7 +24,7 @@ public:AcademicStaff();
 
     // Methods
     void teachCourse(const string& course);
-    void gradeAssignment(const string& studentName, double assignmentScore);
+    void gradeAssignment(const string& assignmentName);
     void viewStudentList(const vector<string>& studentList);
     void scheduleOfficeHours(const string& officeHours);
 

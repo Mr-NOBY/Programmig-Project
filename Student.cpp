@@ -39,7 +39,7 @@ void Student::updateGrade() {
     getline(cin, c);
     it = grades.find(c);
     if(it == grades.end())
-        cout << "\nStudent is not enrolled or course name is inncorrect" ;
+        cout << "\nStudent is not enrolled or course name is incorrect" ;
     else {
         cout << "The new grade for Course " << it->first << " is: ";
         cin >> it->second;

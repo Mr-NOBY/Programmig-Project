@@ -8,8 +8,10 @@
 #include <vector>
 using namespace std;
 
+Menu::Menu(){
 
-void Menu::displayMenu() {
+}
+void Menu::displayMenu(Student student, Uni admin,User user, AcademicStaff ac,Course course,File file) {
     cout << "\t MAIN MENU" << endl << "__________________________" <<
          endl << "Select Menu For:       " << endl <<
          "ADMIN      [1]" << endl <<
@@ -17,11 +19,11 @@ void Menu::displayMenu() {
          "STUDENT   [3]" << endl;
     cin>> choice;
     if (choice == 1) {
-        this->selectOption(user, admin);
+        selectOption(user, admin);
     } else if (choice == 2) {
-        this->selectOption(user, ac, file, course);
+        selectOption( user,  ac, file, course);
     } else if (choice == 3) {
-        this->selectOption(user, student, file, course);
+        selectOption(user, student, file, course);
     }
 }
 
@@ -39,7 +41,6 @@ void Menu::selectOption(User &user, Uni &admin) {
     do {
         switch (choice) {
             case 1:
-
                 user.changePassword(new_password);
                 break;
             case 2:
@@ -66,7 +67,11 @@ void Menu::selectOption(User &user, Uni &admin) {
     }while(choice !=7);
 }
 
-void Menu::selectOption(User &user, AcademicStaff &ac, File &file, Course &course) {
+void Menu::selectOption(User &user, AcademicStaff &ac, File &file, Course &course,const vector<string>& studentList) {
+    string new_password = "new_password";
+    string Course =" ";
+    string officeH=" ";
+
     cout<< "CHOOSE AN OPTION :" <<endl;
     cout << "CHANGE PASSWORD     [1]" << endl <<
          "ADD COURSE     [2]" << endl <<
@@ -75,8 +80,8 @@ void Menu::selectOption(User &user, AcademicStaff &ac, File &file, Course &cours
          "SCHEDULE OFFICE HOURS   [5]" << endl <<
          "GET COURSES TAUGHT           [6]" <<endl <<
          "EXIT            [7]" <<endl;
-    string new_password = "new_password";
 
+    auto courses = ac.getCoursesTaught();
     cin>>choice;
     do{
         switch (choice) {
@@ -84,19 +89,25 @@ void Menu::selectOption(User &user, AcademicStaff &ac, File &file, Course &cours
                 user.changePassword(new_password);
                 break;
             case 2:
-               AcademicStaff addCourseTaught(const string& course);
+                cout << "Enter name of class";
+                cin >> Course;
+               ac.addCourseTaught(Course);
                 break;
             case 3:
                 AcademicStaff gradeAssignment(const string& studentName, double assignmentScore);
                 break;
             case 4:
-                AcademicStaff viewStudentList(const vector<string>& studentList);
+                ac.viewStudentList(studentList);
                 break;
             case 5:
-                AcademicStaff scheduleOfficeHours(const string& officeHours);
+                cout << "Enter office hours";
+                cin >> officeH;
+               ac.scheduleOfficeHours(officeH);
                 break;
             case 6:
-                ac.getCoursesTaught();
+                 for(const string& crs : courses){
+                     cout << crs;
+                 }
                  break;
             case 7:
                 cout << "Exiting program. Goodbye!" << endl;
@@ -112,6 +123,7 @@ void Menu::selectOption(User &user, AcademicStaff &ac, File &file, Course &cours
 
 
 void Menu::selectOption(User &user, Student &student, File &file, Course &course) {
+    string new_password = "new_password";
 
         cout<< "CHOOSE AN OPTION :" <<endl;
         cout << "CHANGE PASSWORD     [1]" << endl <<
@@ -124,32 +136,32 @@ void Menu::selectOption(User &user, Student &student, File &file, Course &course
              "ENROLL COURSE           [8]" <<endl <<
              "EXIT            [9]" <<endl;
         cin>>choice;
-    string new_password = "new_password";
+
         do{
             switch (choice) {
                 case 1:
                      user.changePassword(new_password);
                     break;
                 case 2:
-                    student.getID();
+                    cout<< student.getID() <<endl;
                     break;
                 case 3:
-                    student.getName();
+                    cout << student.getName()<<endl;
                     break;
                 case 4:
-                    student.getEmail();
+                    cout << student.getEmail()<<endl;
                     break;
                 case 5:
-                    student.noOfEnrolledcourses();
+                   cout << student.noOfEnrolledcourses()<<endl;
                     break;
                 case 6:
-                    student.calculateGPA();
+                    cout << student.calculateGPA()<<endl;
                     break;
                 case 7:
                     student.updateGrade();
                     break;
                 case 8:
-                    Student enrollCourse(vector<Course>&, int);
+                   // student.enrollCourse(vector<Course>&, int);
                     break;
                 case 9:
                     cout << "Exiting program. Goodbye!" << endl;

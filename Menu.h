@@ -9,16 +9,11 @@
 class Menu {
 protected:
     int choice;
-    User user;
-    Uni admin;
-    Student student;
-    File file;
-    Course course;
-    AcademicStaff ac;
 public:
-    void displayMenu();
+    Menu();
+    void displayMenu(Student student, Uni admin, User user, AcademicStaff ac,Course course,File file);
     void selectOption(User &user, Uni &admin);
-    void selectOption(User &user,AcademicStaff &ac,File &file, Course &course);
+    void selectOption(User &user,AcademicStaff &ac,File &file, Course &course,const vector<string>& studentList);
     void selectOption(User &user,Student &student, File &file, Course &course);
 
 
