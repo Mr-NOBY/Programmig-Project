@@ -10,19 +10,52 @@
 #include "Uni.h"
 using namespace std;
 
-   int main()
-   {
+
+//int main(){
+//string staff_id, name, department, course ,assignmentName;
+//
+//cout << "Enter staff ID: ";
+//cin >> staff_id;
+//cout << "Enter name: ";
+//cin >> name;
+//cout << "Enter department: ";
+//cin >> department;
+//
+//AcademicStaff professor(staff_id.c_str(), name, department);
+//
+//cout << "Enter a course to be taught: ";
+//cin >> course;
+//professor.addCourseTaught(course);
+//vector<string> courses = professor.getCoursesTaught();
+//for (const string& course : courses) {
+//cout << course << endl;
+//}
+//    cout << "Enter the assignment name: ";
+//    cin >> assignmentName;
+//    professor.gradeAssignment(assignmentName);
+//
+//return 0;
+//}
+
+
+
+
+
+int main(){
        User user;
        Uni uni;
-        vector<Course> course ;
-        vector<Student> student;
+       Course course;
+       AcademicStaff ac;
+      File file;
+        vector<Student> students;
  //      AcademicStaff staff;
        Menu menu;
        user.login();
-       menu.displayMenu();
+       Student(vector<Course>&);
+       menu.displayMenu(student, uni, user, ac, course,file);
  //      user.displayEncryptedPassword();
        return 0;
-   }
+}
 
 
 // int main() {
