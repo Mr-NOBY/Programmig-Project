@@ -1,13 +1,25 @@
 #include "AcademicStaff.h"
+#include "User.h"
 #include <iostream>
 #include <vector>
 #include <string>
 #include <map>
 using namespace std;
 
-AcademicStaff::AcademicStaff(const char *staff_id, const string& name, const string& department) :
-        staff_id(staff_id), name(name), department(department) {}
+AcademicStaff::AcademicStaff() {
+    cout << "Enter Staff Name: " <<endl;
+    getline(cin,name);
+    cout<< "Enter staff ID: " <<endl;
+    getline(cin,staff_id);
+    cout<< "Enter Staff Department: " <<endl;
+    getline(cin,department);
 
+}
+AcademicStaff::AcademicStaff(string id, const string& n, const string& d){             //n= name , d = department
+    name = n;
+    staff_id = id;
+    department = d;
+}
 
 void AcademicStaff::addCourseTaught(const string& course) {
     courses_taught.push_back(course);
@@ -32,7 +44,10 @@ void AcademicStaff::teachCourse(const string& course) {
     courses_taught.push_back(course);
 }
 
-void AcademicStaff::gradeAssignment(const string& assignmentName) {
+void AcademicStaff::gradeAssignment() {
+    string assignmentName = "";
+    cout << "Enter the assignment name: ";
+    cin >> assignmentName;
     cout << "Grading assignment: " << assignmentName << endl;
     map<string, int> studentGrades;
 

@@ -10,7 +10,7 @@
 #include "Uni.h"
 using namespace std;
 
-
+//
 //int main(){
 //string staff_id, name, department, course ,assignmentName;
 //
@@ -30,9 +30,7 @@ using namespace std;
 //for (const string& course : courses) {
 //cout << course << endl;
 //}
-//    cout << "Enter the assignment name: ";
-//    cin >> assignmentName;
-//    professor.gradeAssignment(assignmentName);
+//    professor.gradeAssignment();
 //
 //return 0;
 //}
@@ -42,17 +40,15 @@ using namespace std;
 
 
 int main(){
-       User user;
        Uni uni;
        Course course;
        AcademicStaff ac;
-      File file;
+       File file;
         vector<Student> students;
- //      AcademicStaff staff;
        Menu menu;
-       user.login();
-       Student(vector<Course>&);
-       menu.displayMenu(student, uni, user, ac, course,file);
+       ac.login();
+//       Student(vector<Course>&);
+//       menu.displayMenu(student, uni, user, ac, course,file);
  //      user.displayEncryptedPassword();
        return 0;
 }
