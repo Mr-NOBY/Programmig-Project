@@ -6,17 +6,18 @@
 #include "Uni.h"
 #include "File.h"
 #include <vector>
+#include <string>
 using namespace std;
 
 Menu::Menu(){
 
 }
-void Menu::displayMenu(Student student, Uni admin,User user, AcademicStaff ac,Course course,File file) {
+void Menu::displayMenu(Student student, Uni admin, User user, Student ac, Course course, File file) {
     cout << "\t MAIN MENU" << endl << "__________________________" <<
          endl << "Select Menu For:       " << endl <<
-         "ADMIN      [1]" << endl <<
-         "ACADEMIC STAFF     [2]" << endl <<
-         "STUDENT   [3]" << endl;
+         "[1]  ADMIN      " << endl <<
+         "[2]  ACADEMIC STAFF     " << endl <<
+         "[3]  STUDENT   " << endl;
     cin>> choice;
     if (choice == 1) {
         selectOption(user, admin);
@@ -73,13 +74,13 @@ void Menu::selectOption(User &user, AcademicStaff &ac, File &file, Course &cours
     string officeH=" ";
 
     cout<< "CHOOSE AN OPTION :" <<endl;
-    cout << "CHANGE PASSWORD     [1]" << endl <<
-         "ADD COURSE     [2]" << endl <<
-         "GRADE ASSIGNMENT  [3]" <<
-         "VIEW STUDENT LIST    [4]" << endl <<
-         "SCHEDULE OFFICE HOURS   [5]" << endl <<
-         "GET COURSES TAUGHT           [6]" <<endl <<
-         "EXIT            [7]" <<endl;
+    cout << "[1]CHANGE PASSWORD     " << endl <<
+         "[2]   ADD COURSE     " << endl <<
+         "[3]   GRADE ASSIGNMENT  " <<
+         "[4]   VIEW STUDENT LIST    " << endl <<
+         "[5]   SCHEDULE OFFICE HOURS   " << endl <<
+         "[6]   GET COURSES TAUGHT           " <<endl <<
+         "[7]   EXIT            " <<endl;
 
     auto courses = ac.getCoursesTaught();
     cin>>choice;
@@ -94,7 +95,7 @@ void Menu::selectOption(User &user, AcademicStaff &ac, File &file, Course &cours
                ac.addCourseTaught(Course);
                 break;
             case 3:
-                AcademicStaff gradeAssignment(const string& studentName, double assignmentScore);
+               ac.gradeAssignment();
                 break;
             case 4:
                 ac.viewStudentList(studentList);
@@ -161,7 +162,7 @@ void Menu::selectOption(User &user, Student &student, File &file, Course &course
                     student.updateGrade();
                     break;
                 case 8:
-                   // student.enrollCourse(vector<Course>&, int);
+                    //student.enrollCourse(vector<Course>&, int);
                     break;
                 case 9:
                     cout << "Exiting program. Goodbye!" << endl;
