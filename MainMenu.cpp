@@ -332,12 +332,20 @@ void MainMenu::displayUMenu() {
                 break;
             }
             case 4: {
-                uni.getColleges();
+                vector<string> colleges = uni.getColleges();
+                cout << "\nColleges: \n";
+                for (int i =0 ; i<colleges.size(); i++) {
+                    cout << colleges[i] << endl;
+                }
                 displayUMenu();
                 break;
             }
             case 5: {
-                uni.getDeparments();
+                vector<string> departs = uni.getDeparments();
+                cout << "\nDepartments: \n";
+                for (int i =0 ; i<departs.size(); i++) {
+                    cout << departs[i] << endl;
+                }
                 displayUMenu();
                 break;
             }
