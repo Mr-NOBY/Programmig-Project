@@ -14,9 +14,6 @@ File MainMenu::file;
 
 MainMenu::MainMenu() {
     file = File();
-    courses.emplace_back();
-    courses.emplace_back();
-
 }
 void MainMenu::displayMenu() {
     cout << "\n MAIN MENU" << endl << "__________________________" <<
