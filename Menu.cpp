@@ -12,167 +12,167 @@ using namespace std;
 Menu::Menu(){
 
 }
-void Menu::displayMenu(Student student, Uni admin, User user, Student ac, Course course, File file) {
-    cout << "\t MAIN MENU" << endl << "__________________________" <<
-         endl << "Select Menu For:       " << endl <<
-         "[1]  ADMIN      " << endl <<
-         "[2]  ACADEMIC STAFF     " << endl <<
-         "[3]  STUDENT   " << endl;
-    cin>> choice;
-    if (choice == 1) {
-        selectOption(user, admin);
-    } else if (choice == 2) {
-        selectOption( user,  ac, file, course);
-    } else if (choice == 3) {
-        selectOption(user, student, file, course);
-    }
-}
-
-void Menu::selectOption(User &user, Uni &admin) {
-
-    cout<< "CHOOSE AN OPTION :" <<endl;
-    cout << "CHANGE PASSWORD     [1]" << endl <<
-         "ADD COLLEGE     [2]" << endl <<
-         "ADD DEPARTMENT  [3]" <<
-         "GET COLLEGE    [4]" << endl <<
-         "GET DEPARTMENT   [5]" << endl <<
-         "EXIT            [6]" <<endl;
-    cin>>choice;
-    string new_password = "new_password";
-    do {
-        switch (choice) {
-            case 1:
-                user.changePassword(new_password);
-                break;
-            case 2:
-                admin.addCollege();
-                break;
-            case 3:
-                admin.addDepartment();
-                break;
-            case 4:
-                admin.getColleges();
-                break;
-            case 5:
-                admin.getDeparments();
-                break;
-            case 7:
-                cout << "Exiting program. Goodbye!" << endl;
-                break;
-            default:
-                cout << "Invalid choice. Please try again." << endl;
-
-        }
-
-
-    }while(choice !=7);
-}
-
-void Menu::selectOption(User &user, AcademicStaff &ac, File &file, Course &course,const vector<string>& studentList) {
-    string new_password = "new_password";
-    string Course =" ";
-    string officeH=" ";
-
-    cout<< "CHOOSE AN OPTION :" <<endl;
-    cout << "[1]CHANGE PASSWORD     " << endl <<
-         "[2]   ADD COURSE     " << endl <<
-         "[3]   GRADE ASSIGNMENT  " <<
-         "[4]   VIEW STUDENT LIST    " << endl <<
-         "[5]   SCHEDULE OFFICE HOURS   " << endl <<
-         "[6]   GET COURSES TAUGHT           " <<endl <<
-         "[7]   EXIT            " <<endl;
-
-    auto courses = ac.getCoursesTaught();
-    cin>>choice;
-    do{
-        switch (choice) {
-            case 1:
-                user.changePassword(new_password);
-                break;
-            case 2:
-                cout << "Enter name of class";
-                cin >> Course;
-               ac.addCourseTaught(Course);
-                break;
-            case 3:
-               ac.gradeAssignment();
-                break;
-            case 4:
-                ac.viewStudentList(studentList);
-                break;
-            case 5:
-                cout << "Enter office hours";
-                cin >> officeH;
-               ac.scheduleOfficeHours(officeH);
-                break;
-            case 6:
-                 for(const string& crs : courses){
-                     cout << crs;
-                 }
-                 break;
-            case 7:
-                cout << "Exiting program. Goodbye!" << endl;
-                break;
-            default:
-                cout << "Invalid choice. Please try again." << endl;
-
-        }
-
-        } while (choice!=7);
-}
-
-
-
-void Menu::selectOption(User &user, Student &student, File &file, Course &course) {
-    string new_password = "new_password";
-
-        cout<< "CHOOSE AN OPTION :" <<endl;
-        cout << "CHANGE PASSWORD     [1]" << endl <<
-             "GET ID     [2]" << endl <<
-             "GET NAME  [3]" <<
-             "GET EMAIL    [4]" << endl <<
-             "GET NUMBER OF ENROLLED COURSES   [5]" << endl <<
-             "CALCULATE GPA           [6]" <<endl <<
-             "UPDATE GRADE           [7]" <<endl <<
-             "ENROLL COURSE           [8]" <<endl <<
-             "EXIT            [9]" <<endl;
-        cin>>choice;
-
-        do{
-            switch (choice) {
-                case 1:
-                     user.changePassword(new_password);
-                    break;
-                case 2:
-                    cout<< student.getID() <<endl;
-                    break;
-                case 3:
-                    cout << student.getName()<<endl;
-                    break;
-                case 4:
-                    cout << student.getEmail()<<endl;
-                    break;
-                case 5:
-                   cout << student.noOfEnrolledcourses()<<endl;
-                    break;
-                case 6:
-                    cout << student.calculateGPA()<<endl;
-                    break;
-                case 7:
-                    student.updateGrade();
-                    break;
-                case 8:
-                    //student.enrollCourse(vector<Course>&, int);
-                    break;
-                case 9:
-                    cout << "Exiting program. Goodbye!" << endl;
-                    break;
-                default:
-                    cout << "Invalid choice. Please try again." << endl;
-            }
-
-        } while (choice!=9);
-}
+//void Menu::displayMenu(vector<Student> &students, Uni uni, User admin, vector<AcademicStaff> &ac, vector<Course> &courses, File file) {
+//    cout << "\t MAIN MENU" << endl << "__________________________" <<
+//         endl << "Select Menu For:       " << endl <<
+//         "[1]  ADMIN      " << endl <<
+//         "[2]  ACADEMIC STAFF     " << endl <<
+//         "[3]  STUDENT   " << endl;
+//    cin>> choice;
+//    if (choice == 1) {
+//        selectOption(admin);
+//    } else if (choice == 2) {
+//        selectOption( admin,  ac, file, );
+//    } else if (choice == 3) {
+//        selectOption(user, student, file, course);
+//    }
+//}
+//
+//void Menu::selectOption(User &user, Uni &admin) {
+//
+//    cout<< "CHOOSE AN OPTION :" <<endl;
+//    cout << "CHANGE PASSWORD     [1]" << endl <<
+//         "ADD COLLEGE     [2]" << endl <<
+//         "ADD DEPARTMENT  [3]" <<
+//         "GET COLLEGE    [4]" << endl <<
+//         "GET DEPARTMENT   [5]" << endl <<
+//         "EXIT            [6]" <<endl;
+//    cin>>choice;
+//    string new_password = "new_password";
+//    do {
+//        switch (choice) {
+//            case 1:
+//                user.changePassword(new_password);
+//                break;
+//            case 2:
+//                admin.addCollege();
+//                break;
+//            case 3:
+//                admin.addDepartment();
+//                break;
+//            case 4:
+//                admin.getColleges();
+//                break;
+//            case 5:
+//                admin.getDeparments();
+//                break;
+//            case 7:
+//                cout << "Exiting program. Goodbye!" << endl;
+//                break;
+//            default:
+//                cout << "Invalid choice. Please try again." << endl;
+//
+//        }
+//
+//
+//    }while(choice !=7);
+//}
+//
+//void Menu::selectOption(User &user, AcademicStaff &ac, File &file, Course &course,const vector<string>& studentList) {
+//    string new_password = "new_password";
+//    string Course =" ";
+//    string officeH=" ";
+//
+//    cout<< "CHOOSE AN OPTION :" <<endl;
+//    cout << "[1]CHANGE PASSWORD     " << endl <<
+//         "[2]   ADD COURSE     " << endl <<
+//         "[3]   GRADE ASSIGNMENT  " <<
+//         "[4]   VIEW STUDENT LIST    " << endl <<
+//         "[5]   SCHEDULE OFFICE HOURS   " << endl <<
+//         "[6]   GET COURSES TAUGHT           " <<endl <<
+//         "[7]   EXIT            " <<endl;
+//
+//   // auto courses = ac.getCoursesTaught();
+//    cin>>choice;
+//    do{
+//        switch (choice) {
+//            case 1:
+//                user.changePassword(new_password);
+//                break;
+//            case 2:
+//                cout << "Enter name of class";
+//                cin >> Course;
+//               ac.addCourseTaught(Course);
+//                break;
+//            case 3:
+//               ac.gradeAssignment();
+//                break;
+//            case 4:
+//                ac.viewStudentList(studentList);
+//                break;
+//            case 5:
+//                cout << "Enter office hours";
+//                cin >> officeH;
+//               ac.scheduleOfficeHours(officeH);
+//                break;
+//            case 6:
+//                 for(const string& crs : courses){
+//                     cout << crs;
+//                 }
+//                 break;
+//            case 7:
+//                cout << "Exiting program. Goodbye!" << endl;
+//                break;
+//            default:
+//                cout << "Invalid choice. Please try again." << endl;
+//
+//        }
+//
+//        } while (choice!=7);
+//}
+//
+//
+//
+//void Menu::selectOption(User &user, Student &student, File &file, Course &course) {
+//    string new_password = "new_password";
+//
+//        cout<< "CHOOSE AN OPTION :" <<endl;
+//        cout << "CHANGE PASSWORD     [1]" << endl <<
+//             "GET ID     [2]" << endl <<
+//             "GET NAME  [3]" <<
+//             "GET EMAIL    [4]" << endl <<
+//             "GET NUMBER OF ENROLLED COURSES   [5]" << endl <<
+//             "CALCULATE GPA           [6]" <<endl <<
+//             "UPDATE GRADE           [7]" <<endl <<
+//             "ENROLL COURSE           [8]" <<endl <<
+//             "EXIT            [9]" <<endl;
+//        cin>>choice;
+//
+//        do{
+//            switch (choice) {
+//                case 1:
+//                     user.changePassword(new_password);
+//                    break;
+//                case 2:
+//                    cout<< student.getID() <<endl;
+//                    break;
+//                case 3:
+//                    cout << student.getName()<<endl;
+//                    break;
+//                case 4:
+//                    cout << student.getEmail()<<endl;
+//                    break;
+//                case 5:
+//                   cout << student.noOfEnrolledcourses()<<endl;
+//                    break;
+//                case 6:
+//                    cout << student.calculateGPA()<<endl;
+//                    break;
+//                case 7:
+//                    student.updateGrade();
+//                    break;
+//                case 8:
+//                  //  student.enrollCourse(vector<Course>&, 1);
+//                    break;
+//                case 9:
+//                    cout << "Exiting program. Goodbye!" << endl;
+//                    break;
+//                default:
+//                    cout << "Invalid choice. Please try again." << endl;
+//            }
+//
+//        } while (choice!=9);
+//}
 
 
 

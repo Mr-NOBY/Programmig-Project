@@ -39,19 +39,19 @@ using namespace std;
 
 
 
-int main(){
-       Uni uni;
-       Course course;
-       AcademicStaff ac;
-       File file;
-        vector<Student> students;
-       Menu menu;
-       ac.login();
-//       Student(vector<Course>&);
-//       menu.displayMenu(student, uni, user, ac, course,file);
- //      user.displayEncryptedPassword();
-       return 0;
-}
+//int main(){
+//       Uni uni;
+//       Course course;
+//       AcademicStaff ac;
+//       File file;
+//        vector<Student> students;
+//       Menu menu;
+//       ac.login();
+////       Student(vector<Course>&);
+////       menu.displayMenu(student, uni, user, ac, course,file);
+// //      user.displayEncryptedPassword();
+//       return 0;
+//}
 
 
 // int main() {

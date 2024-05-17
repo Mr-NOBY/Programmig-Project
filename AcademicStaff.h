@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include "User.h"
+#include "Course.h"
 
 using namespace std;
 
@@ -17,14 +18,13 @@ protected:
 public:
     AcademicStaff(string staff_id, const string& name, const string& department);
     AcademicStaff();
-    void addCourseTaught(const string& course);
-    vector<string> getCoursesTaught() const;
+    void getCoursesTaught() const;
     string getStaffID() const;
     string getName() const;
     string getDepartment() const;
 
     // Methods
-    void teachCourse(const string& course);
+    void teachCourse(vector<Course>& c);
     void gradeAssignment();
     void viewStudentList(const vector<string>& studentList);
     void scheduleOfficeHours(const string& officeHours);

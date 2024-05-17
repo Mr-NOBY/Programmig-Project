@@ -11,9 +11,9 @@ protected:
     int choice;
 public:
     Menu();
-    void displayMenu(Student student, Uni admin, User user, Student ac, Course course, File file);
-    void selectOption(User &user, Uni &admin);
-    void selectOption(User &user,AcademicStaff &ac,File &file, Course &course,const vector<string>& studentList);
+    void displayMenu(vector<Student> & , Uni &, User &, vector<AcademicStaff> &, vector<Course> &, File & );
+    void selectOption(User &);
+    void selectOption(User &user,AcademicStaff &ac,File &file,const vector<string>& studentList);
     void selectOption(User &user,Student &student, File &file, Course &course);
 
 
@@ -37,6 +37,8 @@ public:
 //    int selectOption();
 //    void executeOption(int);
 //    void exitSystem();
+    void displayMenu(vector<Student> &students, Uni uni, User admin, vector<AcademicStaff> &ac, vector<Course> &courses,
+                     File file);
 };
 
 

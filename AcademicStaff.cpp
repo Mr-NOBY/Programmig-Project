@@ -1,5 +1,6 @@
 #include "AcademicStaff.h"
 #include "User.h"
+#include "Course.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -15,17 +16,16 @@ AcademicStaff::AcademicStaff() {
     getline(cin,department);
 
 }
-AcademicStaff::AcademicStaff(string id, const string& n, const string& d){             //n= name , d = department
+AcademicStaff::AcademicStaff(string id, const string& n, const string& d){            //n= name , d = department
     name = n;
     staff_id = id;
     department = d;
 }
 
-void AcademicStaff::addCourseTaught(const string& course) {
-    courses_taught.push_back(course);
-}
-vector<string> AcademicStaff::getCoursesTaught() const {
-    return courses_taught;
+void AcademicStaff::getCoursesTaught() const {
+    for (const auto& course : courses_taught) {
+        cout << course << endl;
+    }
 }
 
 string AcademicStaff::getStaffID() const {
@@ -40,18 +40,33 @@ string AcademicStaff::getDepartment() const {
     return department;
 }
 
-void AcademicStaff::teachCourse(const string& course) {
-    courses_taught.push_back(course);
+void AcademicStaff::teachCourse(vector<Course>& c) {
+    string courseID ="";
+
+    getline(cin,courseID);
+    while (true) {
+        cout << "Enter a course ID to be taught : " <<endl;
+        getline(cin,courseID);
+
+        for (int i = 0; i < c.size(); i++) {
+            if (courseID == c[i].getCourseID()) {
+                cout << "Course is already added! Please try again." << endl;
+                return; // Exit the method
+            }
+        }
+        courses_taught.push_back(courseID);
+
+    }
 }
 
 void AcademicStaff::gradeAssignment() {
     string assignmentName = "";
+    int numStudents;
+
     cout << "Enter the assignment name: ";
-    cin >> assignmentName;
+    getline(cin,assignmentName);
     cout << "Grading assignment: " << assignmentName << endl;
     map<string, int> studentGrades;
-
-    int numStudents;
 
     do {
         cout << "Enter the number of students : ";
@@ -93,5 +108,6 @@ void AcademicStaff::viewStudentList(const vector<string>& studentList) {
 
 
 void AcademicStaff::scheduleOfficeHours(const string& officeHours) {
-    OfficeHours = officeHours;
+    cout << "Enter Office Hours : "<<endl;
+    cin >> OfficeHours;
 }
