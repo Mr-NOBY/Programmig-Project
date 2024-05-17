@@ -26,8 +26,9 @@ public:
     // Methods
     void teachCourse(vector<Course>& c);
     void gradeAssignment();
-    void viewStudentList(const vector<string>& studentList);
+    void viewStudentList(const vector<int>& studentList);
     void scheduleOfficeHours(const string& officeHours);
+    vector<string> coursesTaught();
 
 
 };

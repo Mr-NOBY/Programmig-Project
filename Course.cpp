@@ -74,6 +74,11 @@ int Course::getNoEnrolled() {
     return enrolledStudents.size();
 }
 
+vector<int> Course::getEnrolledStu() {
+    return enrolledStudents;
+}
+
+
 
 
 

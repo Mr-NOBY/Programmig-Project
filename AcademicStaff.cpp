@@ -41,21 +41,18 @@ string AcademicStaff::getDepartment() const {
 }
 
 void AcademicStaff::teachCourse(vector<Course>& c) {
-    string courseID ="";
-
-    getline(cin,courseID);
+    string courseID;
     while (true) {
         cout << "Enter a course ID to be taught : " <<endl;
         getline(cin,courseID);
 
         for (int i = 0; i < c.size(); i++) {
             if (courseID == c[i].getCourseID()) {
-                cout << "Course is already added! Please try again." << endl;
-                return; // Exit the method
+                courses_taught.push_back(courseID);
+                return;
             }
         }
-        courses_taught.push_back(courseID);
-
+        cout << "Incorrect course ID. Please try again." << endl;
     }
 }
 
@@ -95,12 +92,12 @@ void AcademicStaff::gradeAssignment() {
 }
 
 
-void AcademicStaff::viewStudentList(const vector<string>& studentList) {
+void AcademicStaff::viewStudentList(const vector<int>& studentList) {
     if (studentList.empty()) {
         cout << "No students enrolled in courses taught by " << name << "." << endl;
     } else {
         cout << "Students enrolled in courses taught by " << name << ":" << endl;
-        for (const string& student : studentList) {
+        for (const int& student : studentList) {
             cout << "- " << student << endl;
         }
     }
@@ -110,4 +107,8 @@ void AcademicStaff::viewStudentList(const vector<string>& studentList) {
 void AcademicStaff::scheduleOfficeHours(const string& officeHours) {
     cout << "Enter Office Hours : "<<endl;
     cin >> OfficeHours;
+}
+
+vector<string> AcademicStaff::coursesTaught() {
+    return courses_taught;
 }

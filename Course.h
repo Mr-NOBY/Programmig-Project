@@ -29,6 +29,7 @@ public:
     void viewCourseDetails();
     void listEnrolledStu();
     void enrollStudent(const int&);
+    vector<int> getEnrolledStu();
 };
 
 
