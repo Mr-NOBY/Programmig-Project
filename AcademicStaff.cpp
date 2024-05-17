@@ -105,8 +105,7 @@ void AcademicStaff::viewStudentList(const vector<int>& studentList) {
 
 
 void AcademicStaff::scheduleOfficeHours(const string& officeHours) {
-    cout << "Enter Office Hours : "<<endl;
-    cin >> OfficeHours;
+    OfficeHours = officeHours;
 }
 
 vector<string> AcademicStaff::coursesTaught() {
